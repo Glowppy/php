@@ -2,4 +2,4 @@
 $nome = "Mario";
 $cognome = "Rossi";
 $eta = 25;
-$studente = true;
+?>
