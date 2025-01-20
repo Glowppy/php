@@ -1,0 +1,19 @@
+// Salvare in un file html
+<html>
+    <body>
+        <form action="http://localhost/test/index.php" method="POST">
+            <label>Nome:</label>
+            <input type="text" name="nome">
+            <label>Cognome:</label>
+            <input type="text" name="cognome">
+            <input type="submit" value="Invia">
+        </form>
+    </body>
+</html>
+
+// Salvare in un file PHP
+<?php
+var_dump($_POST);
+echo "<br>il nome è ".$_POST['nome']." e il cognome è ".$_POST['cognome'];
+?>
+//eliminare la funzione var_dump per non vedere la funzione nella pagina html
