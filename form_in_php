@@ -10,6 +10,7 @@
         </form>
     </body>
 </html>
+// aggiungere "required" dopo ad esempio  <input type="text" name="nome" per poter rendere il campo obbligatorio
 
 // Salvare in un file PHP
 <?php
