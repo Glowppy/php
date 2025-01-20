@@ -1,0 +1,15 @@
+<?php
+function numeri($a,$b){
+    return $a+$b;
+}
+
+$risultato = numeri(10,20);
+echo $risultato."<br>";
+
+
+function addizione($c,$d, $e = 8){
+    return $c+$d+$e;
+}
+echo addizione(10, 20, 30);
+
+?>
