@@ -1,0 +1,28 @@
+<?php
+if(!empty($_POST)){
+    echo "<h3> Il form è stato inviato</h3>";
+}
+?>
+<html>
+    <style>
+        .error{
+            display: block;
+            color: red;
+        }
+    </style>
+    <body>
+        <form action="http://localhost/test/index.php" method="POST">
+            <span>Nome:</span>
+            <input type="text" name="nome" >
+            <?php if(isset($_POST['nome']) &&($_POST['nome'] == ''))
+                echo '<span class="error">Campo obbligatorio</span>';
+            ?>
+            <span>Cognome:</span>
+            <input type="text" name="cognome" >
+            <?php if(isset($_POST['cognome']) &&($_POST['cognome'] == ''))
+                echo '<span class="error">Campo obbligatorio</span>';
+            ?>
+            <input type="submit" value="Invia">
+        </form>
+    </body>
+</html>
