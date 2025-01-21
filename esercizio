@@ -1,0 +1,39 @@
+<html>
+    <style>
+        .error{
+            display: block;
+            color: red;
+        }
+    </style>
+    <?php
+            $persona1 = array("marco@email.it","12345","Marco","Rossi");
+            $persona2 = array("luigi@email.it","abcdef","Luigi","Bianchi");
+            $persona3 = array("luca@email.it","123abc","Luca","Verdi");
+            ?>
+    <body>
+        <form action="http://localhost/nuovoform.php" method="POST">
+            <span>Email:</span>
+            <input type="text" name="email" >
+            <?php if(isset($_POST['email']) &&($_POST['email'] == ''))
+                echo '<span class="error">Campo obbligatorio</span>';
+            ?>
+            <span>Password:</span>
+            <input type="text" name="password" >
+            <?php if(isset($_POST['password']) &&($_POST['password'] == ''))
+                echo '<span class="error">Campo obbligatorio</span>';
+            ?>
+            <input type="submit" value="Invia">
+            <?php
+            $cookieName = "nuovocookie";
+            if(isset($_COOKIE[$cookieName])){
+            $message = "Bentornato ".$_COOKIE[2,3];
+            }
+            ?>
+        </form>
+    </body>
+</html>
+<?php
+if(!empty($_POST)){
+    echo "<h3> Il form è stato inviato</h3>";
+}
+?>
